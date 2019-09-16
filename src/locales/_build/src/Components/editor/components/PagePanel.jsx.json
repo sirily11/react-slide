@@ -1,0 +1,126 @@
+{
+  "Image": {
+    "origin": [
+      [
+        "src/Components/editor/components/PagePanel.jsx",
+        127
+      ]
+    ]
+  },
+  "Image src": {
+    "origin": [
+      [
+        "src/Components/editor/components/PagePanel.jsx",
+        134
+      ]
+    ]
+  },
+  "Text": {
+    "origin": [
+      [
+        "src/Components/editor/components/PagePanel.jsx",
+        164
+      ]
+    ]
+  },
+  "Title text": {
+    "origin": [
+      [
+        "src/Components/editor/components/PagePanel.jsx",
+        170
+      ]
+    ]
+  },
+  "Content": {
+    "origin": [
+      [
+        "src/Components/editor/components/PagePanel.jsx",
+        181
+      ]
+    ]
+  },
+  "Background": {
+    "origin": [
+      [
+        "src/Components/editor/components/PagePanel.jsx",
+        199
+      ],
+      [
+        "src/Components/editor/components/PagePanel.jsx",
+        290
+      ]
+    ]
+  },
+  "Text Background Color": {
+    "origin": [
+      [
+        "src/Components/editor/components/PagePanel.jsx",
+        205
+      ]
+    ]
+  },
+  "Text Color:": {
+    "origin": [
+      [
+        "src/Components/editor/components/PagePanel.jsx",
+        216
+      ]
+    ]
+  },
+  "Text Position": {
+    "origin": [
+      [
+        "src/Components/editor/components/PagePanel.jsx",
+        225
+      ]
+    ]
+  },
+  "Text Alignment": {
+    "origin": [
+      [
+        "src/Components/editor/components/PagePanel.jsx",
+        235
+      ]
+    ]
+  },
+  "Shadow": {
+    "origin": [
+      [
+        "src/Components/editor/components/PagePanel.jsx",
+        255
+      ]
+    ]
+  },
+  "Shadow X": {
+    "origin": [
+      [
+        "src/Components/editor/components/PagePanel.jsx",
+        265
+      ]
+    ]
+  },
+  "Shadow Y": {
+    "origin": [
+      [
+        "src/Components/editor/components/PagePanel.jsx",
+        274
+      ]
+    ]
+  },
+  "Shadow Color:": {
+    "origin": [
+      [
+        "src/Components/editor/components/PagePanel.jsx",
+        280
+      ]
+    ]
+  },
+  "Background Color": {
+    "origin": [
+      [
+        "src/Components/editor/components/PagePanel.jsx",
+        294
+      ]
+    ]
+  }
+}

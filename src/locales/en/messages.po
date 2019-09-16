@@ -1,0 +1,99 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2019-02-22 20:23-0600\n"
+"Mime-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: en\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/Components/editor/components/PagePanel.jsx:199
+#: src/Components/editor/components/PagePanel.jsx:290
+msgid "Background"
+msgstr "Background"
+
+#: src/Components/editor/components/PagePanel.jsx:294
+msgid "Background Color"
+msgstr "Background Color"
+
+#: src/Components/slides/SliderObj.ts:16
+msgid "Center"
+msgstr "Center"
+
+#: src/Components/editor/components/PagePanel.jsx:181
+msgid "Content"
+msgstr "Content"
+
+#: src/Components/editor/components/download.jsx:45
+msgid "Download"
+msgstr "Download"
+
+#: src/Components/slider/Display.tsx:79
+msgid "Find more"
+msgstr "Find more"
+
+#: src/Components/editor/components/PagePanel.jsx:127
+msgid "Image"
+msgstr "Image"
+
+#: src/Components/editor/components/PagePanel.jsx:134
+msgid "Image src"
+msgstr "Image src"
+
+#: src/Components/slides/SliderObj.ts:15
+msgid "Left"
+msgstr "Left"
+
+#: src/Components/slides/SliderObj.ts:14
+msgid "Right"
+msgstr "Right"
+
+#: src/Components/editor/components/PagePanel.jsx:255
+msgid "Shadow"
+msgstr "Shadow"
+
+#: src/Components/editor/components/PagePanel.jsx:280
+msgid "Shadow Color:"
+msgstr "Shadow Color:"
+
+#: src/Components/editor/components/PagePanel.jsx:265
+msgid "Shadow X"
+msgstr "Shadow X"
+
+#: src/Components/editor/components/PagePanel.jsx:274
+msgid "Shadow Y"
+msgstr "Shadow Y"
+
+#: src/Components/editor/components/PagePanel.jsx:164
+msgid "Text"
+msgstr "Text"
+
+#: src/Components/editor/components/PagePanel.jsx:235
+msgid "Text Alignment"
+msgstr "Text Alignment"
+
+#: src/Components/editor/components/PagePanel.jsx:205
+msgid "Text Background Color"
+msgstr "Text Background Color"
+
+#: src/Components/editor/components/PagePanel.jsx:216
+msgid "Text Color:"
+msgstr "Text Color:"
+
+#: src/Components/editor/components/PagePanel.jsx:225
+msgid "Text Position"
+msgstr "Text Position"
+
+#: src/Components/editor/components/PagePanel.jsx:170
+msgid "Title text"
+msgstr "Title text"
+
+#: src/Components/slides/SliderObj.ts:13
+msgid "Top"
+msgstr "Top"

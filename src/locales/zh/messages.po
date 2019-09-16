@@ -1,0 +1,99 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2019-02-22 20:23-0600\n"
+"Mime-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: zh\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/Components/editor/components/PagePanel.jsx:199
+#: src/Components/editor/components/PagePanel.jsx:290
+msgid "Background"
+msgstr "背景"
+
+#: src/Components/editor/components/PagePanel.jsx:294
+msgid "Background Color"
+msgstr "背景颜色"
+
+#: src/Components/slides/SliderObj.ts:16
+msgid "Center"
+msgstr "居中"
+
+#: src/Components/editor/components/PagePanel.jsx:181
+msgid "Content"
+msgstr "内容"
+
+#: src/Components/editor/components/download.jsx:45
+msgid "Download"
+msgstr "下载"
+
+#: src/Components/slider/Display.tsx:79
+msgid "Find more"
+msgstr "了解更多"
+
+#: src/Components/editor/components/PagePanel.jsx:127
+msgid "Image"
+msgstr "照片"
+
+#: src/Components/editor/components/PagePanel.jsx:134
+msgid "Image src"
+msgstr "照片来源"
+
+#: src/Components/slides/SliderObj.ts:15
+msgid "Left"
+msgstr "居左"
+
+#: src/Components/slides/SliderObj.ts:14
+msgid "Right"
+msgstr "居右"
+
+#: src/Components/editor/components/PagePanel.jsx:255
+msgid "Shadow"
+msgstr "阴影"
+
+#: src/Components/editor/components/PagePanel.jsx:280
+msgid "Shadow Color:"
+msgstr "阴影颜色"
+
+#: src/Components/editor/components/PagePanel.jsx:265
+msgid "Shadow X"
+msgstr "阴影X偏移"
+
+#: src/Components/editor/components/PagePanel.jsx:274
+msgid "Shadow Y"
+msgstr "阴影Y偏移"
+
+#: src/Components/editor/components/PagePanel.jsx:164
+msgid "Text"
+msgstr "文字"
+
+#: src/Components/editor/components/PagePanel.jsx:235
+msgid "Text Alignment"
+msgstr "文字对齐"
+
+#: src/Components/editor/components/PagePanel.jsx:205
+msgid "Text Background Color"
+msgstr "文字背景颜色"
+
+#: src/Components/editor/components/PagePanel.jsx:216
+msgid "Text Color:"
+msgstr "文字颜色"
+
+#: src/Components/editor/components/PagePanel.jsx:225
+msgid "Text Position"
+msgstr "文字位置"
+
+#: src/Components/editor/components/PagePanel.jsx:170
+msgid "Title text"
+msgstr "标题文字"
+
+#: src/Components/slides/SliderObj.ts:13
+msgid "Top"
+msgstr "居上"

@@ -1,0 +1,34 @@
+{
+  "Top": {
+    "origin": [
+      [
+        "src/Components/slides/SliderObj.ts",
+        13
+      ]
+    ]
+  },
+  "Right": {
+    "origin": [
+      [
+        "src/Components/slides/SliderObj.ts",
+        14
+      ]
+    ]
+  },
+  "Left": {
+    "origin": [
+      [
+        "src/Components/slides/SliderObj.ts",
+        15
+      ]
+    ]
+  },
+  "Center": {
+    "origin": [
+      [
+        "src/Components/slides/SliderObj.ts",
+        16
+      ]
+    ]
+  }
+}
