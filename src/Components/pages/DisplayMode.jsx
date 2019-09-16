@@ -3,8 +3,8 @@ import { SliderObj } from "../slides/SliderObj";
 import jsonOBJ from "../tests/test";
 import Display from "../slider/Display";
 import ReactFullpage from "@fullpage/react-fullpage";
-import $ from "jquery";
-import getURL from "../settings";
+import { getURL } from "../settings";
+import axios from "axios";
 
 export default class DisplayMode extends Component {
   constructor() {
@@ -18,7 +18,7 @@ export default class DisplayMode extends Component {
     };
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     if (this.props.match.params.debug === "true") {
       this.slides.fromJSON(jsonOBJ);
       this.setState({
@@ -28,11 +28,12 @@ export default class DisplayMode extends Component {
       });
     } else {
       let id = this.props.match.params.id;
-      $.getJSON(getURL("update/" + id), data => {
-        data = JSON.parse(data.config_file);
-        this.slides.pages = data;
-        this.setState({ configID: id, slides: this.slides });
-      });
+      let url = getURL(`slide/${id}/`);
+      let response = await axios.get(url);
+      let data = response.data;
+      data = JSON.parse(data.config_file);
+      this.slides.pages = data;
+      this.setState({ configID: id, slides: this.slides });
     }
   }
 

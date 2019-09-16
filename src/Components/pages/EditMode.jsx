@@ -3,9 +3,8 @@ import "../../App.css";
 import Editor from "../editor/Editor";
 import { MobileStepper, Button } from "@material-ui/core";
 import Display from "../slider/Display";
-import $ from "jquery";
-import getURL from "../settings";
-
+import { getURL } from "../settings";
+import axios from "axios"
 
 const initState = {
   data: [],
@@ -20,14 +19,16 @@ export default class EditMode extends Component {
     this.state = initState;
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     let id = this.props.match.params.id;
-    if (id !== undefined) {
-      $.getJSON(getURL("update/" + id), data => {
-        data = JSON.parse(data.config_file);
-        console.log(data)
-        this.setState({ data: data, id: id ,isDownloaded: true});
-      });
+    console.log(id);
+    if (id) {
+      let url = getURL(`slide/${id}`)
+      let response = await axios.get(url)
+      let data = response.data;
+      data = JSON.parse(data.config_file);
+      console.log(data);
+      this.setState({ data: data, id: id, isDownloaded: true });
     }
   }
 
@@ -72,7 +73,9 @@ export default class EditMode extends Component {
               update={this.update}
               pageNum={this.state.pageNum}
               isDownloaded={this.state.isDownloaded}
-              onLoadEnd={()=>{this.setState({isDownloaded: false})}}
+              onLoadEnd={() => {
+                this.setState({ isDownloaded: false });
+              }}
             />
           </div>
           <div className="col-md-6">

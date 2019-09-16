@@ -1,17 +1,42 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import { SliderObj, PageContentMode } from "../slides/SliderObj";
+import { SliderObj, Page } from "../slides/SliderObj";
 import PagePanel from "./components/PagePanel";
 import Download from "./components/download";
-import getURL from "../settings";
-import $ from "jquery";
+import { getURL } from "../settings";
 import { Snackbar } from "@material-ui/core";
+import axios from "axios";
 
-export default class Editor extends Component {
-  constructor() {
-    super();
+interface Props {
+  data: any;
+  id: any;
+  changes: number;
+  update(json: any): void;
+  isDownloaded: boolean;
+  onLoadEnd: any;
+  pageNum: number;
+}
+
+interface State {
+  page: SliderObj;
+  data: Page[];
+  message: String;
+  changes: number;
+  id?: number;
+}
+
+export default class Editor extends Component<Props, State> {
+  slides: SliderObj;
+
+  constructor(props: Props) {
+    super(props);
     this.slides = new SliderObj();
-    this.state = { page: this.slides, data: "", id: null, message: "", changes : 0 };
+    this.state = {
+      page: this.slides,
+      data: [],
+      message: "",
+      changes: 0
+    };
   }
 
   componentDidMount() {
@@ -23,23 +48,22 @@ export default class Editor extends Component {
     }
   }
 
-  componentDidUpdate(prev) {
+  componentDidUpdate(prev: Props) {
     if (this.props.data !== prev.data && this.props.data.length > 0) {
       this.slides.pages = this.props.data;
       this.setState({ page: this.slides, id: this.props.id });
     }
   }
 
-  updateData = (i, data) => {
+  updateData = (i: number, data: any) => {
     this.slides.setPage(i, data);
     let json = this.slides.toJSONObj();
-    let changes = this.state.changes + 1
-    console.log(changes)
-    if(changes > 10 && this.state.id !== null){
-      this.upload()
-      changes = 0
+    let changes = this.state.changes + 1;
+    if (changes > 10 && this.state.id !== null) {
+      this.upload();
+      changes = 0;
     }
-
+    this.setState({ changes: changes, data: json });
     this.setState({ data: json, page: this.slides, changes: changes });
     this.props.update(json);
   };
@@ -47,26 +71,28 @@ export default class Editor extends Component {
   /*
    * Upload the data to server
    */
-  upload = () => {
+  upload = async () => {
     let url =
-      this.state.id === null
-        ? getURL("create/app")
-        : getURL("update/" + this.state.id);
-    if (this.state.data === "") return;
-    console.log(this.state.page.toJSONObj())
-    $.ajax({
-      url: url,
-      type: this.state.id === null ? "POST" : "PUT",
-      dataType: "json",
-      data: {
-        name: this.state.page.pages[0].text.contentText,
-        description: this.slides.pages[0].text.contentText,
-        config_file: this.state.page.toJSON()
-      },
-      success: data => {
-        this.setState({ id: data.pk, message: "Saved" });
-      }
-    });
+      this.state.id === undefined
+        ? getURL("slide/")
+        : getURL(`slide/${this.state.id}/`);
+    if (this.state.data.length === 0) return;
+
+    const { page } = this.state;
+    console.log(this.state.page.toJSONObj());
+    let data = {
+      name: page.pages[0].text && page.pages[0].text.titleText,
+      description:
+        this.slides.pages[0].text && this.slides.pages[0].text.contentText,
+      config_file: this.state.page.toJSON()
+    };
+
+    let pResponse =
+      this.state.id === undefined
+        ? axios.post(url, data)
+        : axios.patch(url, data);
+    let response = await pResponse;
+    this.setState({ id: response.data.pk, message: "Saved" });
   };
 
   render() {
