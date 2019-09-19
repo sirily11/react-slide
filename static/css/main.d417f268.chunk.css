@@ -1,0 +1,2 @@
+.first-page-text{position:absolute;bottom:70px;-webkit-animation:MoveUpDown 3s linear infinite;animation:MoveUpDown 3s linear infinite;-webkit-animation-delay:2s;animation-delay:2s;color:#fff;text-shadow:1px 0 4px #000;font-size:20px}@-webkit-keyframes MoveUpDown{0%,to{bottom:70px}50%{bottom:60px}}@keyframes MoveUpDown{0%,to{bottom:70px}50%{bottom:60px}}
+/*# sourceMappingURL=main.d417f268.chunk.css.map */
